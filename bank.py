@@ -12,8 +12,9 @@ def str2float(val: str):
         res = None
     return res
 
-def add_cash(full_cash):
-    inp_v = input('Введите сумму пополнения счета: ')
+def add_cash(full_cash, inp_v = None):
+    if inp_v is None:
+        inp_v = input('Введите сумму пополнения счета: ')
     cash_val = str2float(inp_v)
     if cash_val is None:
         dlt = 0
